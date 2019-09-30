@@ -22,3 +22,10 @@ Puzzles I think would be more similar to Mario 2D platformer style puzzles as al
 	Health : Collecting hearts to keep Sailor V alive and going
 	Items  :  Collecting rainbow crystals so that she can have a magic defense shield that lasts 2-3 times. This way the player can’t use the defense the whole game/level. They need to be strategic about when the shield really need to be used.
 	Money : Collecting stars would allow the player to get more power ups, buy more health, as the game progresses to help them beat more minions and have time to think through a puzzle without too much worry about incoming enemies while they do so. 
+
+
+#####IMAGES/INSPIRATION/INFO
+######The Android Game
+![The Android Sailor V Game - Fan Made](README_IMAGES/sailorv_android_game.jpg)
+
+
