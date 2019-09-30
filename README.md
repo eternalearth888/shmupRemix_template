@@ -38,9 +38,9 @@ Puzzles I think would be more similar to Mario 2D platformer style puzzles as al
 
 ###### Sailor Moon Crystal Anime : New
 
-![Animated Gif of Sailor V game from Sailor Moon Crystal](README_IMAGES/chibiusa_sailorv_game.png)
+![Animated Gif of Sailor V game from Sailor Moon Crystal](README_IMAGES/sailorv_sailormooncrystal_animated.gif)
 
-![](README_IMAGES/girls_play_sailorv.jpg)
+![Usagi, Lita and Ami playing Sailor V](README_IMAGES/girls_play_sailorv.jpg)
 
 ![Chibi-Usa playing Sailor V, attempting to hack into the headquarters](README_IMAGES/chibiusa_sailorv_game.png)
 
