@@ -24,8 +24,9 @@ Puzzles I think would be more similar to Mario 2D platformer style puzzles as al
 	Money : Collecting stars would allow the player to get more power ups, buy more health, as the game progresses to help them beat more minions and have time to think through a puzzle without too much worry about incoming enemies while they do so. 
 
 
-#####IMAGES/INSPIRATION/INFO
-######The Android Game
+##### IMAGES/INSPIRATION/INFO
+###### The Android Game
+
 ![The Android Sailor V Game - Fan Made](README_IMAGES/sailorv_android_game.jpg)
 
 
