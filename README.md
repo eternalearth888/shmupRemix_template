@@ -29,25 +29,25 @@ Puzzles I think would be more similar to Mario 2D platformer style puzzles as al
 ### The Android Game
 
 ###### The Android Sailor V Game - Fan Made
-<center>![The Android Sailor V Game - Fan Made](README_IMAGES/sailorv_android_game.jpg)</center>
+![The Android Sailor V Game - Fan Made](README_IMAGES/sailorv_android_game.jpg)
 
 ### Sailor Moon Anime : Original
 ###### Usagi plays Sailor V with passion
-<center>![Usagi plays Sailor V with passion](README_IMAGES/usagi_playing_sailorv.jpg)</center>
+![Usagi plays Sailor V with passion](README_IMAGES/usagi_playing_sailorv.jpg)
 
 ###### The Sailor V Game Poster in front of the Arcade
-<center>![The Sailor V Game Poster in front of the Arcade](README_IMAGES/sailorv_poster.jpg)</center>
+![The Sailor V Game Poster in front of the Arcade](README_IMAGES/sailorv_poster.jpg)
 
 ### Sailor Moon Crystal Anime : New
 ###### Animated Gif of Sailor V game from Sailor Moon Crystal
-<center>![Animated Gif of Sailor V game from Sailor Moon Crystal](README_IMAGES/sailorv_sailormooncrystal_animated.gif)</center>
+![Animated Gif of Sailor V game from Sailor Moon Crystal](README_IMAGES/sailorv_sailormooncrystal_animated.gif)
 
 ###### Usagi, Lita and Ami playing Sailor V
-<center>![Usagi, Lita and Ami playing Sailor V](README_IMAGES/girls_play_sailorv.jpg)</center>
+![Usagi, Lita and Ami playing Sailor V](README_IMAGES/girls_play_sailorv.jpg)
 
 ###### Chibi-Usa playing Sailor V, attempting to hack into the headquarters
-<center>![Chibi-Usa playing Sailor V, attempting to hack into the headquarters](README_IMAGES/chibiusa_sailorv_game.png)</center>
+![Chibi-Usa playing Sailor V, attempting to hack into the headquarters](README_IMAGES/chibiusa_sailorv_game.png)
 
 ###### Usagi dreams of the Sailor V game
-<center>![Usagi dreams of the Sailor V game](README_IMAGES/sailorv_sailormooncrystal_dream.jpg)</center>
+![Usagi dreams of the Sailor V game](README_IMAGES/sailorv_sailormooncrystal_dream.jpg)
 
