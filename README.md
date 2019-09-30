@@ -1,9 +1,9 @@
-### Shmup Remix Template
+# Shmup Remix Template
 
 - This is the beginning shmup game template for Game Development at CU Boulder ATLAS Fall 2019 with Matt Bethancourt
 - This repository will be tweaked and edited over time to create a shmup game that is intended for learning and creative purposes
 
-### Sailor V Shmup Game
+## Sailor V Shmup Game
 This would be a Sailor Moon Game that I always wanted to have exist. In the story of Sailor Moon (manga to anime) there is a Sailor V 2D Plat-former game that also has an element of shmups to it. There have been many attempted versions of Sailor Moon games in the past, but none of them really attempted to recreate or make a better version of this Sailor V Game. I am currently unable to find a clip on youtube, but I can find many episodes that show this game. Even as early as episode 1!! And a few years ago, there was a Sailor V made fan game for android:
 
 https://apkpure.com/silver-crystal-for-sailor-v/com.gmail.imagination.duo.Sailor_V
@@ -18,7 +18,7 @@ Sailor V and the player's current objective in the game is to save Luna the cat 
 
 Puzzles I think would be more similar to Mario 2D platformer style puzzles as all the art and concepts I have seen for the Sailor V Game are also 2D Platformer. Unlike Mario, though, Sailor V can also shoot laser beams as her main ability. I am not sure if I should make this an infinite supply like most SHMUP games I know, or if I should add a stamina/energy bar to force the player to be more mindful with there.
 
-##### RESOURCES
+### RESOURCES
 - Health : Collecting hearts to keep Sailor V alive and going
 - Items  :  Collecting rainbow crystals so that she can have a magic defense shield that lasts 2-3 times. This way the player can’t use the defense the whole game/level. They need to be strategic about when the shield really need to be used.
 - Money : Collecting stars would allow the player to get more power ups, buy more health, as the game progresses to help them beat more minions and have time to think through a puzzle without too much worry about incoming enemies while they do so. 
