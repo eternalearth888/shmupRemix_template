@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
@@ -49,5 +50,17 @@ public class Main : MonoBehaviour
         // Invoke SpawnEnemy() again
         // USing Invoke() instead of InvokeRepeating() makes spawning more dynamic
         Invoke("SpawnEnemy", 1f/enemySpawnPerSecond);
+    }
+
+    public void DelayedRestart(float delay)
+    {
+        // Invoke the Restart() method in delay seconds
+        Invoke("Restart", delay);
+    }
+
+    public void Restart()
+    {
+        // Reload _Scene_0 to restart th game
+        SceneManager.LoadScene("_Scene_0");
     }
 }
