@@ -35,9 +35,12 @@ public class Enemy : MonoBehaviour
     {
         Move();
 
-        if (bndCheck != null && !bndCheck.offDown)
+        if (bndCheck != null && !bndCheck.isOnScreen)
         {
-            Destroy(gameObject);
+            if (pos.y < bndCheck.camHeight - bndCheck.radius)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
