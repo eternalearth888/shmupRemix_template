@@ -60,7 +60,7 @@ public class Main : MonoBehaviour
 
     public void Restart()
     {
-        // Reload to Main Menu to restart th game
-        SceneManager.LoadScene("_Main_Menu");
+        // Reload _Scene_0 to restart th game
+        SceneManager.LoadScene("_Scene_0");
     }
 }
