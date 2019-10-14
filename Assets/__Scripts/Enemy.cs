@@ -37,7 +37,8 @@ public class Enemy : MonoBehaviour
 
         if (bndCheck != null && !bndCheck.isOnScreen)
         {
-            if (pos.y < bndCheck.camHeight - bndCheck.radius)
+            // read right to left, if it is past left side of the screen
+            if (pos.x < 0 - bndCheck.radius)
             {
                 Destroy(gameObject);
             }
@@ -46,8 +47,9 @@ public class Enemy : MonoBehaviour
 
     public virtual void Move()
     {
+        // right to left
         Vector3 tempPos = pos;
-        tempPos.y -= speed * Time.deltaTime;
+        tempPos.x -= speed * Time.deltaTime;
         pos = tempPos;
     }
 

@@ -9,7 +9,7 @@ public class Hero : MonoBehaviour
     [Header("Set in Inspector")]
     //The fields control the movement of the ship
     public float speed = 30;
-    public float rollMult = -45;
+   // public float rollMult = -45;
     public float pitchMult = 30;
     public float gameRestartDelay = 2f;
     public GameObject projectilePrefab;
@@ -45,9 +45,7 @@ public class Hero : MonoBehaviour
         pos.y += yAxis * speed * Time.deltaTime;
         transform.position = pos;
 
-        // Rotate the ship to make it feel more dynamic
-        transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
-
+       
         // Allow the ship to fire
         if (Input.GetKeyDown(KeyCode.Space))
         {
