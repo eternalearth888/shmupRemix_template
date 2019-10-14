@@ -58,7 +58,7 @@ public class Hero : MonoBehaviour
         GameObject projGO = Instantiate<GameObject>(projectilePrefab);
         projGO.transform.position = transform.position;
         Rigidbody rigiddB = projGO.GetComponent<Rigidbody>();
-        rigiddB.velocity = Vector3.up * projectileSpeed;
+        rigiddB.velocity = Vector3.right * projectileSpeed;
     }
 
     private void OnTriggerEnter(Collider other)

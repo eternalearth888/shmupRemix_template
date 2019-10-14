@@ -15,8 +15,8 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if a projectile goes off the top of the screen, then destroy it
-        if (bndCheck.offUp)
+        // if a projectile goes off the right of the screen, then destroy it
+        if (bndCheck.offRight)
         {
             Destroy(gameObject);
         }
