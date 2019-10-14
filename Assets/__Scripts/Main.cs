@@ -41,10 +41,10 @@ public class Main : MonoBehaviour
         // Set the initial position for the spawned enemy
 
         Vector3 pos = Vector3.zero;
-        float xMin = -bndCheck.camWidth + enemyPadding;
-        float xMax = bndCheck.camWidth - enemyPadding;
-        pos.x = Random.Range(xMin, xMax);
-        pos.y = bndCheck.camHeight + enemyPadding;
+        float yMin = -bndCheck.camHeight + enemyPadding;
+        float yMax = bndCheck.camHeight - enemyPadding;
+        pos.y = Random.Range(yMin, yMax);
+        pos.x = bndCheck.camWidth + enemyPadding;
         go.transform.position = pos;
 
         // Invoke SpawnEnemy() again
