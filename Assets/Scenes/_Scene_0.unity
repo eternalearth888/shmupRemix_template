@@ -479,8 +479,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8223449669501949825, guid: 06c70bca868074d2aae2147acd81ed0a,
     type: 3}
   projectileSpeed: 40
-  laserPrefab: {fileID: 1985750160556847920, guid: 500d1341326fd3042a01c2c5d19c8036,
+  laserPrefab: {fileID: 6900259663822343202, guid: ed378e60ba949404d803c8be162fe8b1,
     type: 3}
+  firePoint: {fileID: 963194225}
 --- !u!54 &1512762411
 Rigidbody:
   m_ObjectHideFlags: 0
