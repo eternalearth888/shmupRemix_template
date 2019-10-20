@@ -103,7 +103,12 @@ public class Hero : MonoBehaviour
     {
         // Destory current laser
         DestroyLaser();
-        spawnedLaser.transform.position = Input.mousePosition;
+        spawnedLaser = Instantiate<GameObject>(laserPrefab);
+        LineRenderer lr = spawnedLaser.GetComponent<LineRenderer>();
+        lr.SetPosition(0, transform.position);
+        lr.SetPosition(1, Input.mousePosition);
+
+        spawnedLaser.SetActive(true);
     }
 
     void DestroyLaser()
