@@ -135,6 +135,7 @@ public class Hero : MonoBehaviour
         if (go.tag == "Enemy")
         {
             shieldLevel--;
+            print("Enemy has hit your shield. Current ShieldLevel: " + shieldLevel);
             Destroy(go);
         }
         else
