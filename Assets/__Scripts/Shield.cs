@@ -31,9 +31,5 @@ public class Shield : MonoBehaviour
             // Adjust the texture offset to show different shield level
             mat.mainTextureOffset = new Vector2(0.2f * levelShown, 0);
         }
-        // Rotate the shield a bit every frame in a time based way
-        // rZ because we are rotating slowly on the Z axis
-        float rZ = -(rotationsPerSecond * Time.time * 360) % 360f;
-        transform.rotation = Quaternion.Euler(0, 0, rZ);
     }
 }

@@ -113,8 +113,11 @@ public class Hero : MonoBehaviour
 
     void DestroyLaser()
     {
-        spawnedLaser.SetActive(false);
-        Destroy(spawnedLaser);
+        if (spawnedLaser != null)
+        {
+            spawnedLaser.SetActive(false);
+            Destroy(spawnedLaser);
+        }
     }
 
     
@@ -153,6 +156,7 @@ public class Hero : MonoBehaviour
         set
         {
             _shieldLevel = Mathf.Min(value, 4);
+            print("Shield Level: " + _shieldLevel);
            // If the shield is going to be set to less than zero
            if (value < 0)
            {
