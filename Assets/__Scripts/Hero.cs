@@ -19,7 +19,6 @@ public class Hero : MonoBehaviour
 
     // give the hero the ability to shoot laser beams
     public GameObject laserPrefab;
-    public GameObject firePoint; // where we are going to spawn the laser
     private GameObject spawnedLaser;
 
     [Header("Set Dynamically")]
@@ -82,7 +81,10 @@ public class Hero : MonoBehaviour
     void TempLaser()
     {
         // Raycast to grab mouse position???
-        spawnedLaser = Instantiate(laserPrefab, firePoint.transform) as GameObject;
+        spawnedLaser = Instantiate<GameObject>(laserPrefab);
+        LineRenderer lr = spawnedLaser.GetComponent<LineRenderer>();
+        lr.SetPosition(0, transform.position);
+        lr.SetPosition(1, Input.mousePosition);
         spawnedLaser.SetActive(true);
 
     }
