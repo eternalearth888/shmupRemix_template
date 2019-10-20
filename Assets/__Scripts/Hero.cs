@@ -78,6 +78,7 @@ public class Hero : MonoBehaviour
         // Raycast to grab mouse position?
         GameObject laserGO = Instantiate<GameObject>(laserPrefab);
 
+
     }
 
     private void OnTriggerEnter(Collider other)
