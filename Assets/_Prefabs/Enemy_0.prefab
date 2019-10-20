@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 5973081579225264821}
   - component: {fileID: 6774837899753853847}
   m_Layer: 9
-  m_Name: sailorv_enemy0
+  m_Name: kunzite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

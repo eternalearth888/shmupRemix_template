@@ -43,6 +43,7 @@ public class Hero : MonoBehaviour
     {
         // Pull in information from the Input class
         float xAxis = Input.GetAxis("Horizontal");
+        float yAxis = Input.GetAxis("Vertical");
 
         // Change the transform.position based on the axes
         // She should only be allowed to move Horizontally
@@ -50,28 +51,34 @@ public class Hero : MonoBehaviour
         pos.x += xAxis * speed * Time.deltaTime;
         transform.position = pos;
 
+        //Give her a jump ability
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            pos = transform.position;
+            pos.y += yAxis * speed * Time.deltaTime;
+            transform.position = pos;
+        }
+
        
         // Allow the ship to fire
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             TempFire();
         }
 
         // Laser beam
-        // Spawn the Laser
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            TempLaser();
+            CreateLaser();
         }
-
-        // Make spawned laser follow position of mouse while user holds down Left Shift key
-        if (Input.GetKey(KeyCode.LeftShift))
+        
+        if (Input.GetKey(KeyCode.X))
         {
+            // Make spawned laser follow position of mouse while user holds down Left Shift key
             UpdateLaser();
         }
-       
-        // Destroy Spawned Laser
-        if(Input.GetKeyUp(KeyCode.LeftShift))
+
+        if (Input.GetKeyUp(KeyCode.X))
         {
             //destroy laser once not being used
             DestroyLaser();
@@ -88,7 +95,7 @@ public class Hero : MonoBehaviour
     }
 
     // Laser
-    void TempLaser()
+    void CreateLaser()
     {
         // Raycast to grab mouse position???
         spawnedLaser = Instantiate<GameObject>(laserPrefab);

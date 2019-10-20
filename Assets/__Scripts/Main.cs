@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
+// This is our Game Controller
 public class Main : MonoBehaviour
 {
     static public Main S;   // A singleton for Main
@@ -16,7 +18,17 @@ public class Main : MonoBehaviour
 
     void Awake()
     {
-        S = this;
+        // If we don't currently have one,
+        if (S == null)
+        {
+            S = this;
+        }
+        else if (S != this)
+        {
+            // Destory duplicate game objects
+            Destroy(gameObject);
+        }
+        
         //Set bndCheck to reference the BoundsCheck component on this GameObject
         bndCheck = GetComponent<BoundsCheck>();
         // Invoke SpawnEnemy() once (in 2 seconds based on default values)
@@ -27,9 +39,10 @@ public class Main : MonoBehaviour
     {
         // Pick a random Enemy prefab to instantiate
         int ndx = Random.Range(0, prefabEnemies.Length);
-        GameObject go = Instantiate<GameObject>(prefabEnemies[ndx]); // go is the currently random chosen enemy prefab that has now become a game object in game
+        // go is the currently random chosen enemy prefab that has now become a game object in game
+        GameObject go = Instantiate<GameObject>(prefabEnemies[ndx]);
 
-        // Position the Enemy above the screen with a random x position
+        // Position the Enemy to the right the screen with a random y position
         float enemyPadding = enemyDefaultPadding;
 
         if (go.GetComponent<BoundsCheck>() != null)
@@ -39,12 +52,12 @@ public class Main : MonoBehaviour
         }
 
         // Set the initial position for the spawned enemy
-
         Vector3 pos = Vector3.zero;
         float yMin = -bndCheck.camHeight + enemyPadding;
         float yMax = bndCheck.camHeight - enemyPadding;
         pos.y = Random.Range(yMin, yMax);
         pos.x = bndCheck.camWidth + enemyPadding;
+        // move them
         go.transform.position = pos;
 
         // Invoke SpawnEnemy() again
