@@ -120,6 +120,95 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &96172807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6900259663822343202, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_Name
+      value: LaserFirePoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343205, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343204, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_Positions.Array.data[0].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900259663822343204, guid: ed378e60ba949404d803c8be162fe8b1,
+        type: 3}
+      propertyPath: m_Positions.Array.data[0].y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed378e60ba949404d803c8be162fe8b1, type: 3}
 --- !u!1 &266975238
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,8 +295,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266975238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 3.4, z: 0}
-  m_LocalScale: {x: 40, y: 40, z: 40}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 1512762409}
   m_RootOrder: 1
@@ -479,6 +568,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8223449669501949825, guid: 06c70bca868074d2aae2147acd81ed0a,
     type: 3}
   projectileSpeed: 40
+  laserPrefab: {fileID: 1985750160556847920, guid: 500d1341326fd3042a01c2c5d19c8036,
+    type: 3}
 --- !u!54 &1512762411
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -607,7 +698,7 @@ GameObject:
   - component: {fileID: 2070213545}
   - component: {fileID: 2070213546}
   m_Layer: 8
-  m_Name: sailorv_hero
+  m_Name: Sailor_V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

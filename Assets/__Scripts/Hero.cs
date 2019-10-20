@@ -12,8 +12,13 @@ public class Hero : MonoBehaviour
    // public float rollMult = -45;
     public float pitchMult = 30;
     public float gameRestartDelay = 2f;
+
+    // basic projectile - give the hero the ability to shoot
     public GameObject projectilePrefab;
     public float projectileSpeed = 40;
+
+    // give the hero the ability to shoot laser beams
+    public GameObject laserPrefab;
 
     [Header("Set Dynamically")]
     private float _shieldLevel = 1;
@@ -51,6 +56,12 @@ public class Hero : MonoBehaviour
         {
             TempFire();
         }
+
+        // Laser beam prefab test?
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            TempLaser();
+        }
     }
 
     void TempFire()
@@ -59,6 +70,13 @@ public class Hero : MonoBehaviour
         projGO.transform.position = transform.position;
         Rigidbody rigiddB = projGO.GetComponent<Rigidbody>();
         rigiddB.velocity = Vector3.right * projectileSpeed;
+    }
+
+    void TempLaser()
+    {
+        // Raycast to grab mouse position
+        GameObject laserGO = Instantiate<GameObject>(laserPrefab);
+
     }
 
     private void OnTriggerEnter(Collider other)
