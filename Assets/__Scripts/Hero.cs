@@ -43,12 +43,11 @@ public class Hero : MonoBehaviour
     {
         // Pull in information from the Input class
         float xAxis = Input.GetAxis("Horizontal");
-        float yAxis = Input.GetAxis("Vertical");
 
         // Change the transform.position based on the axes
+        // She should only be allowed to move Horizontally
         Vector3 pos = transform.position;
         pos.x += xAxis * speed * Time.deltaTime;
-        pos.y += yAxis * speed * Time.deltaTime;
         transform.position = pos;
 
        
@@ -58,11 +57,21 @@ public class Hero : MonoBehaviour
             TempFire();
         }
 
-        // Laser beam prefab test?
+        // Laser beam
+        // Spawn the Laser
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             TempLaser();
         }
+
+        // Make spawned laser follow position of mouse
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            UpdateLaser();
+        }
+       
+
+        // Destroy Spawned Laser
         if(Input.GetKeyUp(KeyCode.LeftShift))
         {
             //destroy laser once not being used
@@ -70,6 +79,7 @@ public class Hero : MonoBehaviour
         }
     }
 
+    // Shooting
     void TempFire()
     {
         GameObject projGO = Instantiate<GameObject>(projectilePrefab);
@@ -78,6 +88,7 @@ public class Hero : MonoBehaviour
         rigiddB.velocity = Vector3.right * projectileSpeed;
     }
 
+    // Laser
     void TempLaser()
     {
         // Raycast to grab mouse position???
@@ -85,8 +96,14 @@ public class Hero : MonoBehaviour
         LineRenderer lr = spawnedLaser.GetComponent<LineRenderer>();
         lr.SetPosition(0, transform.position);
         lr.SetPosition(1, Input.mousePosition);
-        spawnedLaser.SetActive(true);
 
+        
+        spawnedLaser.SetActive(true);
+    }
+
+    void UpdateLaser()
+    {
+        spawnedLaser.transform.position = Input.mousePosition;
     }
 
     void DestroyLaser()
@@ -95,13 +112,15 @@ public class Hero : MonoBehaviour
         Destroy(spawnedLaser);
     }
 
+    
+
     private void OnTriggerEnter(Collider other)
     {
         Transform rootT = other.gameObject.transform.root;
         GameObject go = rootT.gameObject;
-        //print("Triggered: " + go.name);
+        print("Triggered: " + go.name);
 
-        // Make sure it;s not the same triggering go as last time
+        // Make sure it's not the same triggering game object as last time
         if (go == lastTriggerGo)
         {
             return;
