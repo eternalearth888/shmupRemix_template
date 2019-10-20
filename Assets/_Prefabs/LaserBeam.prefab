@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6900259663822343205}
   - component: {fileID: 6900259663822343204}
   - component: {fileID: 6900259663822343207}
-  - component: {fileID: 1449245621472880452}
+  - component: {fileID: -1972007186281204623}
   m_Layer: 10
   m_Name: LaserBeam
   m_TagString: ProjectileHero
@@ -145,7 +145,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 1
---- !u!65 &1449245621472880452
+--- !u!65 &-1972007186281204623
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

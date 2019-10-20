@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1517220406397896514}
   - component: {fileID: 9081365819990853958}
-  m_Layer: 0
+  - component: {fileID: 1201628646351327673}
+  m_Layer: 9
   m_Name: jadeite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,6 +81,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!135 &1201628646351327673
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2248733223462261676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8437488808395228428
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +104,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8437488808395228419}
   - component: {fileID: 8437488808395228418}
+  - component: {fileID: -8148433515576004676}
+  - component: {fileID: -5971002723599960942}
   m_Layer: 9
   m_Name: Enemy_1
   m_TagString: Enemy
@@ -128,3 +144,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &-8148433515576004676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437488808395228428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 926f6e28a8e39483ea0e3c425edfb731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: -2.5
+  keepOnScreen: 0
+  isOnScreen: 1
+  camWidth: 0
+  camHeight: 0
+  offRight: 0
+  offLeft: 0
+  offUp: 0
+  offDown: 0
+--- !u!114 &-5971002723599960942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437488808395228428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a29e01f4a9d23444a35ac881d3c621b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+  waveFrequency: 2
+  waveWidth: 4
+  waveRotx: 45
+  y0: 0
+  birthTime: 0
