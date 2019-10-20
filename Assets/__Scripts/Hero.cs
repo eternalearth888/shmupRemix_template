@@ -63,6 +63,11 @@ public class Hero : MonoBehaviour
         {
             TempLaser();
         }
+        if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            //destroy laser once not being used
+            DestroyLaser();
+        }
     }
 
     void TempFire()
@@ -75,10 +80,16 @@ public class Hero : MonoBehaviour
 
     void TempLaser()
     {
-        // Raycast to grab mouse position?
+        // Raycast to grab mouse position???
         GameObject laserGO = Instantiate<GameObject>(laserPrefab);
+        laserGO.SetActive(true);
 
+    }
 
+    void DestroyLaser()
+    {
+        GameObject currentLaser = GetComponent<GameObject>(laserPrefab);
+        currentLaser.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
