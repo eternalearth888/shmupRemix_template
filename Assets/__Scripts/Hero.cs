@@ -64,13 +64,12 @@ public class Hero : MonoBehaviour
             TempLaser();
         }
 
-        // Make spawned laser follow position of mouse
+        // Make spawned laser follow position of mouse while user holds down Left Shift key
         if (Input.GetKey(KeyCode.LeftShift))
         {
             UpdateLaser();
         }
        
-
         // Destroy Spawned Laser
         if(Input.GetKeyUp(KeyCode.LeftShift))
         {
@@ -97,12 +96,13 @@ public class Hero : MonoBehaviour
         lr.SetPosition(0, transform.position);
         lr.SetPosition(1, Input.mousePosition);
 
-        
         spawnedLaser.SetActive(true);
     }
 
     void UpdateLaser()
     {
+        // Destory current laser
+        DestroyLaser();
         spawnedLaser.transform.position = Input.mousePosition;
     }
 
