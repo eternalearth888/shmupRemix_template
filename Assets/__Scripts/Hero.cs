@@ -82,7 +82,7 @@ public class Hero : MonoBehaviour
     void TempLaser()
     {
         // Raycast to grab mouse position???
-        spawnedLaser = Instantiate<GameObject>(laserPrefab);
+        spawnedLaser = Instantiate(laserPrefab, firePoint.transform) as GameObject;
         spawnedLaser.SetActive(true);
 
     }
