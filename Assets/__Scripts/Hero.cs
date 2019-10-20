@@ -19,6 +19,7 @@ public class Hero : MonoBehaviour
 
     // give the hero the ability to shoot laser beams
     public GameObject laserPrefab;
+    public GameObject firePoint; // where we are going to spawn the laser
 
     [Header("Set Dynamically")]
     private float _shieldLevel = 1;
@@ -74,7 +75,7 @@ public class Hero : MonoBehaviour
 
     void TempLaser()
     {
-        // Raycast to grab mouse position
+        // Raycast to grab mouse position?
         GameObject laserGO = Instantiate<GameObject>(laserPrefab);
 
     }
