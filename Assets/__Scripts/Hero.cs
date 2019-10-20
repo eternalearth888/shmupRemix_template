@@ -92,6 +92,7 @@ public class Hero : MonoBehaviour
     void DestroyLaser()
     {
         spawnedLaser.SetActive(false);
+        Destroy(spawnedLaser);
     }
 
     private void OnTriggerEnter(Collider other)
