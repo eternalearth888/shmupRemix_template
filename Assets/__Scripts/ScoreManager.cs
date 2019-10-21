@@ -7,6 +7,7 @@ public enum eScoreType
 {
     enemy,
     boss,
+    powerUp
 }
 
 public class ScoreManager : MonoBehaviour
