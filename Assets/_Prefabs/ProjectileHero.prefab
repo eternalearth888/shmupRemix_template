@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 891830275345111339}
   - component: {fileID: 6788411365514015838}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: sailorVProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

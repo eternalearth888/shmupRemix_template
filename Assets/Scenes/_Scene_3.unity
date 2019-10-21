@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfe4ca27a398c940ae7cefac8dfa83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1722188913}
   score: 0
   oldScore: 0
 --- !u!114 &653457505
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEnemies:
-  - {fileID: 3676273797816923689, guid: aa54f1c2e80d8441684529507aac4f5f, type: 3}
+  - {fileID: 2512133213991418104, guid: 51033b575606447fface1bc73ece5f2e, type: 3}
   enemySpawnPerSecond: 0.5
   enemyDefaultPadding: 1.5
 --- !u!114 &653457506
@@ -909,7 +909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfe4ca27a398c940ae7cefac8dfa83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1722188913}
   score: 0
   oldScore: 0
 --- !u!114 &1722188913
