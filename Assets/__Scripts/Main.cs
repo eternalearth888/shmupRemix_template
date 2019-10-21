@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// This is our Game Controller
 public class Main : MonoBehaviour
 {
     static public Main S;   // A singleton for Main
@@ -73,7 +72,7 @@ public class Main : MonoBehaviour
 
     public void Restart()
     {
-        // Reload _Scene_0 to restart th game
-        SceneManager.LoadScene("_Scene_0");
+        // Reload MainMenu to restart th game
+        SceneManager.LoadScene("_Main_Menu");
     }
 }
