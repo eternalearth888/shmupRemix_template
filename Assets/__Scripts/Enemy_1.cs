@@ -9,9 +9,9 @@ public class Enemy_1 : Enemy
     public float waveFrequency = 2;
     // sine wave width in meters
     public float waveWidth = 4;
-    public float waveRotx = 45;
+    public float waveRoty = 45;
 
-    // The initial value of the x pos
+    // The initial value of the y pos
     public float y0;
 
     public float birthTime;
@@ -23,6 +23,7 @@ public class Enemy_1 : Enemy
         //Set x0 to the inital position (remember, right to left)
         y0 = pos.y;
 
+        // sin wave is based off of time, i think
         birthTime = Time.time;
     }
 
@@ -38,16 +39,14 @@ public class Enemy_1 : Enemy
         tempPos.y = y0 - waveWidth * sin;
         pos = tempPos;
 
-        //rotate about y
-        Vector3 rot = new Vector3(sin * waveRotx, 0, 0);
-        this.transform.rotation = Quaternion.Euler(rot);
-
         base.Move();
+
+        print(bndCheck.isOnScreen);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
     }
 }

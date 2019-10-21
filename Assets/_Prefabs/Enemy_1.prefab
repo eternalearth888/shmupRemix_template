@@ -183,6 +183,6 @@ MonoBehaviour:
   score: 100
   waveFrequency: 2
   waveWidth: 4
-  waveRotx: 45
-  y0: 0
+  waveRoty: 45
+  x0: 0
   birthTime: 0
