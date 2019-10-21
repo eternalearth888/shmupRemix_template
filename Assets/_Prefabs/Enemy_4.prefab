@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1077935168209146956}
   - component: {fileID: 5255357514969566888}
-  - component: {fileID: 750681288379049501}
+  - component: {fileID: 4928872275054905110}
   m_Layer: 0
   m_Name: queenberyl
   m_TagString: Untagged
@@ -129,8 +129,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!135 &750681288379049501
-SphereCollider:
+--- !u!65 &4928872275054905110
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -140,5 +140,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.54
+  m_Size: {x: 5.63, y: 7.08, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
