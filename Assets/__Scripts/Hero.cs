@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hero : MonoBehaviour
 {
@@ -160,6 +161,7 @@ public class Hero : MonoBehaviour
            if (value < 0)
            {
                Destroy(this.gameObject);
+               SceneManager.LoadScene("_Lose_Scene");
            }
         }
     }
