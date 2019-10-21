@@ -31,6 +31,8 @@ public class ScoreManager : MonoBehaviour
         }
 
         scoreText = GetComponent<Text>();
+        
+        DisplayScore();
         S = this;
     }
 
