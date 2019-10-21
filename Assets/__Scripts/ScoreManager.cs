@@ -20,7 +20,15 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score = 0.0f;
+        if (oldScore != 0)
+        {
+            score = oldScore;
+        }
+        else
+        {
+            score = 0.0f;
+        }
+        
         scoreText = GetComponent<Text>();
         DisplayScore();
         S = this;
@@ -56,7 +64,7 @@ public class ScoreManager : MonoBehaviour
 
     private void DisplayScore()
     {
-        scoreText.text = "SCORE: " + score;
+        scoreText.text = "SCORE: " + score.ToString("N0");
         NextSceneCheck();
     }
 
@@ -64,6 +72,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (score == 10000)
         {
+            oldScore = score;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
