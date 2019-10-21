@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 1077935168209146956}
   - component: {fileID: 5255357514969566888}
   - component: {fileID: 4928872275054905110}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: queenberyl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
