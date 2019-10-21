@@ -27,10 +27,10 @@ public class ScoreManager : MonoBehaviour
         else
         {
             score = 0.0f;
+            oldScore = 0;
         }
-        
+
         scoreText = GetComponent<Text>();
-        DisplayScore();
         S = this;
     }
 
@@ -53,10 +53,12 @@ public class ScoreManager : MonoBehaviour
             case eScoreType.enemy:
                 score += 100;
                 DisplayScore();
+                NextSceneCheck() ;
                 break;
             case eScoreType.boss:
                 score += 1000000;
                 DisplayScore();
+                NextSceneCheck();
                 break;
         }
 
@@ -65,12 +67,12 @@ public class ScoreManager : MonoBehaviour
     private void DisplayScore()
     {
         scoreText.text = "SCORE: " + score.ToString("N0");
-        NextSceneCheck();
     }
 
     private void NextSceneCheck()
     {
-        if (score == 10000)
+        // next level every 1000 points
+        if (score > oldScore+1000 )
         {
             oldScore = score;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
