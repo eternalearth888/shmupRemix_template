@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfe4ca27a398c940ae7cefac8dfa83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 664725560}
   score: 0
   oldScore: 0
 --- !u!114 &661969830
@@ -355,6 +355,9 @@ MonoBehaviour:
   - {fileID: 638428926345385988, guid: a6a82aa7239764f6ab83b5c4b1d1e182, type: 3}
   enemySpawnPerSecond: 0.5
   enemyDefaultPadding: 1.5
+  prefabPowerUps: []
+  powerUpSpawnPerSecond: 0.5
+  powerUpDefaultPadding: 1.5
 --- !u!114 &661969831
 MonoBehaviour:
   m_ObjectHideFlags: 0
