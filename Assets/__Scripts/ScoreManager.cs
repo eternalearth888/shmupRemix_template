@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public enum eScoreType
 {
@@ -12,6 +13,7 @@ public class ScoreManager : MonoBehaviour
 {
     public Text scoreText;
     public float score;
+    public float oldScore;
 
     public static ScoreManager S;
 
@@ -55,6 +57,15 @@ public class ScoreManager : MonoBehaviour
     private void DisplayScore()
     {
         scoreText.text = "SCORE: " + score;
+        NextSceneCheck();
+    }
+
+    private void NextSceneCheck()
+    {
+        if (score == 10000)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
 }
