@@ -61,8 +61,9 @@ public class Enemy : MonoBehaviour
         {
             Destroy(otherGO);   // Destroy the projectile
             Destroy(gameObject);    // Destroy the enemy
+            ScoreManager.EVENT(eScoreType.enemy);
             //Poor man's debugging
-            print("Enemy hit by ProjectileHero: " + otherGO.name);
+            //print("Enemy hit by ProjectileHero: " + otherGO.name);
         }
         else
         {

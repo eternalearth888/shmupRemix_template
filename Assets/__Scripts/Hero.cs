@@ -26,7 +26,7 @@ public class Hero : MonoBehaviour
 
     // This variable holds a reference to the last triggering GameObject
     private GameObject lastTriggerGo = null;
-
+    
     void Awake()
     {
         if (S == null)
@@ -45,19 +45,11 @@ public class Hero : MonoBehaviour
         float xAxis = Input.GetAxis("Horizontal");
         float yAxis = Input.GetAxis("Vertical");
 
-        // Change the transform.position based on the axes
-        // She should only be allowed to move Horizontally
+        // Change the transform.position based on the axes=
         Vector3 pos = transform.position;
         pos.x += xAxis * speed * Time.deltaTime;
+        pos.y += yAxis * speed * Time.deltaTime;
         transform.position = pos;
-
-        //Give her a jump ability
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            pos = transform.position;
-            pos.y += yAxis * speed * Time.deltaTime;
-            transform.position = pos;
-        }
 
        
         // Allow the ship to fire
@@ -163,13 +155,11 @@ public class Hero : MonoBehaviour
         set
         {
             _shieldLevel = Mathf.Min(value, 4);
-            print("Shield Level: " + _shieldLevel);
+            print("Health Level: " + _shieldLevel);
            // If the shield is going to be set to less than zero
            if (value < 0)
            {
                Destroy(this.gameObject);
-               // Tell Main.S to restart the game after a delay
-               Main.S.DelayedRestart(gameRestartDelay);
            }
         }
     }

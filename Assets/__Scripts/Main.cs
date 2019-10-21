@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-
+// GameController
 public class Main : MonoBehaviour
 {
     static public Main S;   // A singleton for Main
@@ -17,7 +16,7 @@ public class Main : MonoBehaviour
 
     void Awake()
     {
-        // If we don't currently have one,
+        // If we don't currently have a game, make it
         if (S == null)
         {
             S = this;
