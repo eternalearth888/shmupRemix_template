@@ -34,18 +34,6 @@ public class ScoreManager : MonoBehaviour
         S = this;
     }
 
-    static public void EVENT(eScoreType evt)
-    {
-        try
-        {
-            S.Event(evt);
-        }
-        catch (System.NullReferenceException nre)
-        {
-            Debug.LogError("ScoreManager:EVENT() called while S=null\n" + nre);
-        }
-    }
-
     void Event(eScoreType evt)
     {
         switch (evt)
@@ -57,6 +45,11 @@ public class ScoreManager : MonoBehaviour
                 break;
             case eScoreType.boss:
                 score += 1000000;
+                DisplayScore();
+                NextSceneCheck();
+                break;
+            default:
+                score += 0;
                 DisplayScore();
                 NextSceneCheck();
                 break;
