@@ -29,21 +29,9 @@ public class ScoreManager : MonoBehaviour
             score = 0.0f;
             oldScore = 0;
         }
-        DisplayScore();
+
         scoreText = GetComponent<Text>();
         S = this;
-    }
-
-    static public void EVENT(eScoreType evt)
-    {
-        try
-        {
-            S.Event(evt);
-        }
-        catch (System.NullReferenceException nre)
-        {
-            Debug.LogError("ScoreManager.EVENT() called while S=null\n" + nre);
-        }
     }
 
     void Event(eScoreType evt)
