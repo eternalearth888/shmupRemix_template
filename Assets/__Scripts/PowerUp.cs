@@ -5,10 +5,8 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     [Header("Set in Inspector: Enemy")]
-    public float speed = 10f;   // speed in m/s
-    public float fireRate = .3f;    // Seconds/shots (unused)
-    public float health = 10;
-    public int score = 100; // Points earned for destroying this
+    public float speed = 5f;   // speed in m/s
+    public int score = 500; // Points earned for destroying this
 
     protected BoundsCheck bndCheck;
 
@@ -56,7 +54,7 @@ public class PowerUp : MonoBehaviour
     private void OnCollisionEnter(Collision coll)
     {
         GameObject otherGO = coll.gameObject;
-        if (otherGO.tag == "Hero")
+        if (otherGO.tag == "ProjectileHero")
         {
             Destroy(gameObject);    // Destroy the powerup
             ScoreManager.EVENT(eScoreType.powerUp);
@@ -65,7 +63,7 @@ public class PowerUp : MonoBehaviour
         }
         else
         {
-            print("Enemy hit by non-ProjectileHero: " + otherGO.name);
+            print("Power Up hit by non-ProjectileHero: " + otherGO.name);
         }
     }
 

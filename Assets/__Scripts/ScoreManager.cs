@@ -63,6 +63,11 @@ public class ScoreManager : MonoBehaviour
                 DisplayScore();
                 NextSceneCheck();
                 break;
+            case eScoreType.powerUp:
+                score += 500;
+                DisplayScore();
+                NextSceneCheck();
+                break;
         }
 
     }

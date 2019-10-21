@@ -465,6 +465,10 @@ MonoBehaviour:
   - {fileID: 8437488808395228428, guid: 2b7609a95915c4f4c978ecd19674de9b, type: 3}
   enemySpawnPerSecond: 0.5
   enemyDefaultPadding: 1.5
+  prefabPowerUps:
+  - {fileID: 1566820747825298613, guid: a106b96a4fd7cce498694aab8623ebf5, type: 3}
+  powerUpSpawnPerSecond: 0.5
+  powerUpDefaultPadding: 1.5
 --- !u!114 &859264578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,7 +625,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 88
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &1512762412
 MonoBehaviour:

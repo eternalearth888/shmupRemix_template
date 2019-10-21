@@ -12,6 +12,11 @@ public class Main : MonoBehaviour
     public float enemySpawnPerSecond = .5f;
     public float enemyDefaultPadding = 1.5f;
 
+    // power up stuff
+    public GameObject[] prefabPowerUps;
+    public float powerUpSpawnPerSecond = .5f;
+    public float powerUpDefaultPadding = 1.5f;
+
     private BoundsCheck bndCheck;
 
     void Awake()
@@ -31,6 +36,8 @@ public class Main : MonoBehaviour
         bndCheck = GetComponent<BoundsCheck>();
         // Invoke SpawnEnemy() once (in 2 seconds based on default values)
         Invoke("SpawnEnemy", 1f/enemySpawnPerSecond);
+        // Invoke SpawnPowerUp() starting 10 seconds, and then every 10 seconds
+        Invoke("SpawnPowerUp", 2f*(1f / powerUpSpawnPerSecond));
     }
 
     public void SpawnEnemy()
@@ -51,8 +58,8 @@ public class Main : MonoBehaviour
 
         // Set the initial position for the spawned enemy
         Vector3 pos = Vector3.zero;
-        float yMin = -bndCheck.camHeight + enemyPadding;
-        float yMax = bndCheck.camHeight - enemyPadding;
+        float yMax = -bndCheck.camHeight + enemyPadding;
+        float yMin = bndCheck.camHeight - enemyPadding;
         pos.y = Random.Range(yMin, yMax);
         pos.x = bndCheck.camWidth + enemyPadding;
         // move them
@@ -61,6 +68,36 @@ public class Main : MonoBehaviour
         // Invoke SpawnEnemy() again
         // USing Invoke() instead of InvokeRepeating() makes spawning more dynamic
         Invoke("SpawnEnemy", 1f/enemySpawnPerSecond);
+    }
+
+    public void SpawnPowerUp()
+    {
+        // Pick a random Enemy prefab to instantiate
+        int ndx = Random.Range(0, prefabPowerUps.Length);
+        // go is the currently random chosen enemy prefab that has now become a game object in game
+        GameObject go = Instantiate<GameObject>(prefabPowerUps[ndx]);
+
+        // Position the Enemy to the right the screen with a random y position
+        float powerUpPadding = powerUpDefaultPadding;
+
+        if (go.GetComponent<BoundsCheck>() != null)
+        {
+            // power up padding is based on the current enemy's radius
+            powerUpPadding = Mathf.Abs(go.GetComponent<BoundsCheck>().radius);
+        }
+
+        // Set the initial position for the spawned power up
+        Vector3 pos = Vector3.zero;
+        float xMin = -bndCheck.camHeight + powerUpDefaultPadding;
+        float xMax = bndCheck.camHeight - powerUpDefaultPadding;
+        pos.x = Random.Range(xMin, xMax);
+        pos.y = bndCheck.camHeight + powerUpDefaultPadding;
+        // move them
+        go.transform.position = pos;
+
+        // Invoke SpawnEnemy() again
+        // USing Invoke() instead of InvokeRepeating() makes spawning more dynamic
+        Invoke("SpawnPowerUp", 2f * (1f / powerUpSpawnPerSecond));
     }
 
     public void DelayedRestart(float delay)

@@ -141,6 +141,12 @@ public class Hero : MonoBehaviour
             print("Enemy has hit your shield. Current ShieldLevel: " + shieldLevel);
             Destroy(go);
         }
+        else if (go.tag == "PowerUp")
+        {
+            shieldLevel++;
+            print("Shield Level Increased. Current ShieldLevel: " + shieldLevel);
+            Destroy(go);
+        }
         else
         {
             print("Triggered by Non-Enemy: " + go.name);
@@ -161,7 +167,7 @@ public class Hero : MonoBehaviour
            if (value < 0)
            {
                Destroy(this.gameObject);
-               SceneManager.LoadScene("_Lose_Scene");
+               SceneManager.LoadScene("_Lose_Screen");
            }
         }
     }
