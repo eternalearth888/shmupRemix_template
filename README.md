@@ -18,7 +18,7 @@ Sailor V and the player's current objective in the game is to save Luna the cat 
 
 Puzzles I think would be more similar to Mario 2D platformer style puzzles as all the art and concepts I have seen for the Sailor V Game are also 2D Platformer. Unlike Mario, though, Sailor V can also shoot laser beams as her main ability. I am not sure if I should make this an infinite supply like most SHMUP games I know, or if I should add a stamina/energy bar to force the player to be more mindful with there.
 
-### RESOURCES
+### POSSIBLE RESOURCES
 - Health : Collecting hearts to keep Sailor V alive and going
 - Items  :  Collecting rainbow crystals so that she can have a magic defense shield that lasts 2-3 times. This way the player can’t use the defense the whole game/level. They need to be strategic about when the shield really need to be used.
 - Money : Collecting stars would allow the player to get more power ups, buy more health, as the game progresses to help them beat more minions and have time to think through a puzzle without too much worry about incoming enemies while they do so. 
@@ -50,4 +50,14 @@ Puzzles I think would be more similar to Mario 2D platformer style puzzles as al
 
 ###### Usagi dreams of the Sailor V game
 ![Usagi dreams of the Sailor V game](README_IMAGES/sailorv_sailormooncrystal_dream.jpg)
+
+-------
+
+Oct 21, 2019 PlayTest results
+
+- Most common feedback was that I needed to make sure to put instructions or a how
+to so that the player will know what buttons are for shooting projectiles and which one is for the laser beams.
+- Need to make a point to explain that you can use the mouse to tell the laser beam where to go
+- Need to use fixed assets for GUI
+- People liked that I made a game that exists in a fictional world and tried to bring it to life in the real world.
 
