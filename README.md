@@ -60,4 +60,11 @@ to so that the player will know what buttons are for shooting projectiles and wh
 - Need to make a point to explain that you can use the mouse to tell the laser beam where to go
 - Need to use fixed assets for GUI
 - People liked that I made a game that exists in a fictional world and tried to bring it to life in the real world.
+- People wanted to be able to shoot backwards but were unable to; something I did not take into consideration
 
+Personal Goals
+- I want to add progress bar for her health
+- I want to add progress bar for level progression
+- I want to have sprite animation
+- I want to add a joystick and buttons
+- 3D Print an arcade setup with Raspberry PI (potentially)
